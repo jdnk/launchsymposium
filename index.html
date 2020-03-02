@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id=typewriter>
+            <script type="text/javascript">
+                var p = document.getElementById('typewriter');
+                p.innerHTML = '';
+                var n = 0;
+                var str;
+                if (typeof window.orientation !== "undefined") {
+                    var str = "KANYE WEST'S CHANGE IS NOT A PUBLICITY STUNT. <br><br>WHAT'S YOUR TAKE? <br><br>(TOUCH HERE)";
+                } else {
+                    var str = "KANYE WEST'S CHANGE IS NOT A PUBLICITY STUNT. <br><br>WHAT'S YOUR TAKE? <br><br>(HOVER HERE)";
+                }
+                var typeTimer = setInterval(function() {
+                n = n + 1;
+                p.innerHTML = str.slice(0, n);
+                if (n === str.length) {
+                    clearInterval(typeTimer);
+                    p.innerHTML = str + " ";
+                    n = 0;
+                    setInterval(function() {
+    
+                    if (n === 0) {
+                        p.innerHTML = str + "|"
+                        n = 1;
+                    } else {
+                        p.innerHTML = str
+                        n = 0;
+                    };
+                    }, 500);
+                };
+                }, 70);
+            </script>
+        </div>
+        <div class="inner">
+            <h1 id="countdown">
+                <script type="text/javascript">
+                    var tDate = new Date('2020-03-07')
+
+                    function timeUntil(targetDate) {
+                        var now = new Date();
+                        var t = Date.parse(targetDate) - Date.parse(now);
+                        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        return {'total': t, 'days': days};
+                    }
+
+                    function updateClock() {
+                        var t = timeUntil(tDate);
+                        document.getElementById('countdown').innerHTML = t.days + ' DAYS UNTIL LAUNCH SYMPOSIUM';
+                        if(t.total <= 0) {
+                            clearInterval(timeInterval);
+                        }
+                    }
+
+                    function makeCountdown() {
+                        updateClock();
+                        setInterval(updateClock(), 1000);
+                    }
+                    window.onload = makeCountdown();
+                </script>
+            </h1>
+            <br>
+            <p>HAVE DINNER, DRINK WINE, TALK TO PROFESSORS AND STUDENTS, AND GIVE US YOUR TAKES ON:</p>
+            <br>
+            <p id=cycle>
+                <script type="text/javascript">
+                    var list = ['HONG KONG'.fontcolor('white'), 'KANYE WEST'.fontcolor('white'), 'POLITICS AND FREEDOM'.fontcolor('white'),
+                    'QUEERNESS AND CHRISTIANITY'.fontcolor('white'), 'AND MORE'.fontcolor('white')];
+
+                    var InfiniteRotator = {
+                        init: function() {
+                            var numberOfItems = list.length;
+                            var currentItem = 0;
+                            document.getElementById('cycle').innerHTML = list[currentItem];
+                            var infiniteLoop = setInterval(function() {
+                                document.getElementById('cycle').innerHTML = list[currentItem];
+                                if(currentItem == numberOfItems -1){
+                                    currentItem = 0;
+                                } else {
+                                    currentItem++;
+                                }   
+                            }, 200);
+                        }
+                    };
+                
+                    InfiniteRotator.init();
+                </script>
+            </p>
+            <br>
+            <p>EDMUNDS BALLROOM<br>MARCH 7<br>5:30 - 7:30 PM</p>
+        </div>
+    </div>
+
+</body>
+</html>
