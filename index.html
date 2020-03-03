@@ -18,7 +18,7 @@
                     if (typeof window.orientation !== "undefined") {
                         var str = "KANYE WEST'S CHANGE IS NOT A PUBLICITY STUNT. <br><br>WHAT'S YOUR TAKE? <br><br>(TOUCH HERE)";
                     } else {
-                        var str = "KANYE WEST'S CHANGE IS NOT A PUBLICITY STUNT. <br><br>WHAT'S YOUR TAKE? <br><br>(HOVER HERE)";
+                        var str = "KANYE WEST'S CHANGE IS NOT A PUBLICITY STUNT. <br><br>WHAT'S YOUR TAKE? <br><br>(CLICK HERE)";
                     }
                     var typeTimer = setInterval(function() {
                     n = n + 1;
@@ -103,21 +103,18 @@
             function onHover(myClass) { document.getElementsByClassName(myClass)[0].style.zIndex = 2; }
             function offHover(myClass) { document.getElementsByClassName(myClass)[0].style.zIndex = 5; }
             if (typeof window.orientation !== "undefined") {
-            document.getElementById("typewriter").onmouseover = function() { console.log("MOUSE IN ON!"); onHover("inner"); }
-            document.getElementById("typewriter").onmouseover = function() { console.log("MOUSE IN OFF!"); offHover("outer"); }
-            document.getElementById("typewriter").onmouseout  = function() { console.log("MOUSE OUT!"); onHover("outer"); }
-            document.getElementById("typewriter").onmouseout  = function() { console.log("MOUSE OUT OFF!"); offHover("inner"); }
-            console.log("TEST MOBILE!")
+            document.getElementById("typewriter").onclick = function() { onHover("inner"); }
+            document.getElementById("typewriter").onclick = function() { offHover("outer"); }
+            document.getElementById("typewriter").onclick  = function() { onHover("outer"); }
+            document.getElementById("typewriter").onclick  = function() { offHover("inner"); }
             } else {
-            document.getElementById("typewriter").onmouseover = function() { console.log("MOUSE IN ON!"); onHover("inner"); }
-            document.getElementById("typewriter").onmouseover = function() { console.log("MOUSE IN OFF!"); offHover("outer"); }
-            document.getElementById("typewriter").onmouseout  = function() { console.log("MOUSE OUT!"); onHover("outer"); }
-            document.getElementById("typewriter").onmouseout  = function() { console.log("MOUSE OUT OFF!"); offHover("inner"); }
-            console.log("TEST DESKTOP");
+            document.getElementById("typewriter").onclick = function() { onHover("inner"); }
+            document.getElementById("typewriter").onclick = function() { offHover("outer"); }
+            document.getElementById("typewriter").onclick  = function() { onHover("outer"); }
+            document.getElementById("typewriter").onclick  = function() { offHover("inner"); }
             }
         </script>
     </div>
 
 </body>
 </html>
-
