@@ -11,7 +11,7 @@ body {
 
 .container .outer {
     z-index: 1;
-    background: white;
+    background: #fff4ec;
     width: 100%;
     height: 100%;
     position: absolute;
