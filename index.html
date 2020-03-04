@@ -30,7 +30,7 @@
                         p.innerHTML = str + " ";
                         n = 0;
                         setInterval(function() {
-        
+
                         if (n === 0) {
                             p.innerHTML = str + "|"
                             n = 1;
@@ -51,8 +51,10 @@
 
                     function timeUntil(targetDate) {
                         var now = new Date();
-                        var t = Date.parse(targetDate) - Date.parse(now);
-                        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        var parseNow = Math.floor(Date.parse(now)/(1000*60*60*24));
+                        var parseDate = Math.floor(Date.parse(targetDate)/(1000*60*60*24));
+                        var t = Date.parse(targetDate);
+                        var days = parseDate-parseNow;
                         return {'total': t, 'days': days};
                     }
 
@@ -90,11 +92,11 @@
                                     currentItem = 0;
                                 } else {
                                     currentItem++;
-                                }   
+                                }
                             }, 200);
                         }
                     };
-                
+
                     InfiniteRotator.init();
                 </script>
             </p>
