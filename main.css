@@ -9,6 +9,19 @@ body {
     font-size: 2.5vh;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    width: 15%;
+}
+
 .container .outer {
     z-index: 1;
     background: #fff4ec;
@@ -85,6 +98,14 @@ body {
         padding-left: 10%;
         padding-right: 10%;
     }
+
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    width: 50%;
+}
 }
 
 @media only screen and (max-height: 450px) {

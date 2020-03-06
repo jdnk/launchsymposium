@@ -45,7 +45,8 @@
             </div>
         </div>
         <div class="inner">
-            <h1 id="countdown">
+            <a id="link" href="https://www.facebook.com/events/221671405549826/">
+              <h1 id="countdown">
                 <script type="text/javascript">
                     var tDate = new Date('2020-03-24')
 
@@ -60,7 +61,7 @@
 
                     function updateClock() {
                         var t = timeUntil(tDate);
-                        document.getElementById('countdown').innerHTML = t.days + ' DAYS UNTIL LAUNCH SYMPOSIUM';
+                        document.getElementById('countdown').innerHTML = t.days + ' DAYS UNTIL <u>LAUNCH SYMPOSIUM</u>';
                         if(t.total <= 0) {
                             clearInterval(timeInterval);
                         }
@@ -72,9 +73,10 @@
                     }
                     window.onload = makeCountdown();
                 </script>
-            </h1>
+              </h1>
+            <a id="link" href="https://www.facebook.com/events/221671405549826/">
             <br>
-            <p>HAVE DINNER, DRINK WINE, TALK TO PROFESSORS AND STUDENTS, AND GIVE US YOUR TAKES ON:</p>
+            <p>HAVE DINNER, TALK TO PROFESSORS AND STUDENTS, AND GIVE US YOUR TAKES ON:</p>
             <br>
             <p id=cycle>
                 <script type="text/javascript">
@@ -101,7 +103,13 @@
                 </script>
             </p>
             <br>
-            <p>EDMUNDS BALLROOM<br>MARCH 24<br>5:30 - 7:30 PM</p>
+            <p>
+              EDMUNDS BALLROOM<br>MARCH 24<br>5:30 - 7:30 PM<br><br>
+              <a id="link" href="https://docs.google.com/forms/d/1wnM8D5Ou4s4_gc02qWlHmeaotCM-6RTGlkbHudr6NII/edit">[CLICK HERE TO RSVP]</a>
+            </p>
+            <a id="link" href="https://www.facebook.com/events/221671405549826/">
+              <img src="./logo.png"></img>
+            </a>
         </div>
         <script type="text/javascript">
             function onHover(myClass) { document.getElementsByClassName(myClass)[0].style.zIndex = 2; }
